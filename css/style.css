@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+body {
+    font-family: Quicksand;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #eee;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(7, 30, 81, 1) 0%, rgba(5, 43, 64, 1) 90%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.trans {
+    transition: 2s;
+}
+
+.clock {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: blanchedalmond;
+    color: rgb(27, 26, 26);
+    box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    border: 5px solid rgb(243, 145, 25);
+}
+
+.circle-plate {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background-color: rgba(175, 173, 170, 0.342);
+    border: 10px solid rgba(185, 184, 183, 0.253);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock .number {
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    transform: rotate(var(--rotation));
+}
+
+.clock .number1 {
+    --rotation: 30deg
+}
+
+.clock .number2 {
+    --rotation: 60deg
+}
+
+.clock .number3 {
+    --rotation: 90deg
+}
+
+.clock .number4 {
+    --rotation: 120deg
+}
+
+.clock .number5 {
+    --rotation: 150deg
+}
+
+.clock .number6 {
+    --rotation: 180deg
+}
+
+.clock .number7 {
+    --rotation: 210deg
+}
+
+.clock .number8 {
+    --rotation: 240deg
+}
+
+.clock .number9 {
+    --rotation: 270deg
+}
+
+.clock .number10 {
+    --rotation: 300deg
+}
+
+.clock .number11 {
+    --rotation: 330deg
+}
+
+.clock .hand {
+    --rotation: 30;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    background-color: black;
+    border-top: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.clock .hand.hour {
+    width: 10px;
+    height: 35%;
+    background-color: black;
+}
+
+.clock .hand.minute {
+    width: 7px;
+    height: 40%;
+    background-color: black;
+}
+
+.clock .hand.second {
+    width: 3px;
+    height: 45%;
+    background-color: red;
+}
+
+.digit {
+    --rotation: 0;
+    transform: rotate(var(--rotation)) !important;
+    padding: 0 !important;
+}
+
+.digit1 {
+    --rotation: 330deg;
+}
+
+.digit2 {
+    --rotation: 300deg;
+}
+
+.digit3 {
+    --rotation: 270deg;
+}
+
+.digit4 {
+    --rotation: 240deg;
+}
+
+.digit5 {
+    --rotation: 210deg;
+}
+
+.digit6 {
+    --rotation: 180deg;
+}
+
+.digit7 {
+    --rotation: 150deg;
+}
+
+.digit8 {
+    --rotation: 120deg;
+}
+
+.digit9 {
+    --rotation: 90deg;
+}
+
+.digit10 {
+    --rotation: 60deg;
+}
+
+.digit11 {
+    --rotation: 30deg;
+}
+
+.nav-icon {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background-color: blanchedalmond;
+}
+
+.fa-paint-brush {
+    color: rgb(145, 17, 17);
+    font-size: 14px;
+}
+
+.nav-icon:hover,
+.options:hover {
+    background-color: rgb(226, 220, 212);
+    transition: 0.1s;
+    transform: scale(1.1);
+}
+
+.nav-icon:active {
+    background-color: rgb(190, 185, 178);
+    transition: 0;
+}
+
+.nav-options {
+    position: fixed;
+    bottom: 15%;
+    right: -10%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    transition: right 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    z-index: 4;
+}
+
+.options {
+    background-color: blanchedalmond;
+    margin-bottom: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+.block {
+    border-radius: 2px;
+    width: 18px;
+    height: 18px;
+    margin-top: 10px;
+}
+
+.red {
+    background-image: radial-gradient( circle 738px at 7.4% 47.9%, rgba(225, 63, 79, 1) 0%, rgba(245, 61, 79, 1) 47%, rgba(247, 161, 175, 1) 90.2%) !important;
+}
+
+.blue {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(7, 30, 81, 1) 0%, rgba(5, 43, 64, 1) 90%) !important;
+}
+
+.orange {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(255, 131, 8, 1) 0%, rgba(245, 63, 63, 1) 90%) !important;
+}
+
+.slideOut {
+    right: 5%;
+}
