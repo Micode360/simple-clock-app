@@ -34,14 +34,14 @@ navIcon.addEventListener("click", () => {
 
 function setBackgroundColor(tag) {
     let id = tag.id;
-    let body = document.querySelector('body');
+    let main = document.querySelector('main');
 
     if (id === 'red') {
-        body.style.backgroundImage = 'radial-gradient( circle 738px at 7.4% 47.9%,  rgba(225,63,79,1) 0%, rgba(245,61,79,1) 47%, rgba(247,161,175,1) 90.2% )';
+        main.style.backgroundImage = 'radial-gradient( circle farthest-corner at 10% 20%,  rgba(130,12,10,1) 0%, rgba(222,14,14,1) 90% )';
     } else if (id === 'blue') {
-        body.style.backgroundImage = 'radial-gradient( circle farthest-corner at 10% 20%, rgba(7, 30, 81, 1) 0%, rgba(5, 43, 64, 1) 90%)';
+        main.style.backgroundImage = 'radial-gradient( circle farthest-corner at 10% 20%, rgba(7, 30, 81, 1) 0%, rgba(5, 43, 64, 1) 90%)';
     } else if (id === 'orange') {
-        body.style.backgroundImage = 'radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,131,8,1) 0%, rgba(245,63,63,1) 90% )';
+        main.style.backgroundImage = 'radial-gradient( circle farthest-corner at 10% 20%,  rgba(255,131,8,1) 0%, rgba(245,63,63,1) 90% )';
     } else {
         return;
     }
