@@ -3,6 +3,14 @@ body {
     font-family: Quicksand;
     margin: 0;
     padding: 0;
+}
+
+main{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     font-size: 16px;
     color: #eee;
     background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(7, 30, 81, 1) 0%, rgba(5, 43, 64, 1) 90%);
@@ -219,7 +227,7 @@ body {
 .nav-options {
     position: fixed;
     bottom: 15%;
-    right: -10%;
+    right: -50%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
